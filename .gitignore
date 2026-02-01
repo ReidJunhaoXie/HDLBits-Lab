@@ -1,0 +1,17 @@
+# EDA Generated Files
+*.vvp
+*.vcd
+*.out
+*.log
+*.history
+
+# Verilator Generated
+obj_dir/
+
+# Simulation Directory Content (but keep the folder)
+sim/*
+!sim/.gitkeep
+
+# System & IDE
+.DS_Store
+.vscode/

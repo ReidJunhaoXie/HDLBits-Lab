@@ -1,0 +1,26 @@
+{
+  "name": "HDL Professional Lab",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // 設定終端機預設為 Bash
+        "terminal.integrated.defaultProfile.linux": "bash",
+        // 設定 Verilog formatter
+        "verilog.linting.linter": "iverilog"
+      },
+      "extensions": [
+        // [必裝] 語法高亮與自動補全
+        "mshr-h.veriloghdl",
+        // [關鍵] 用於取代 GTKWave GUI，直接在 VSCode 看波形
+        "tmpwhat.wavetrace",
+        // [選裝] 程式碼美化
+        "eichholz.verilog-formatter"
+      ]
+    }
+  },
+  // 容器建立後顯示訊息
+  "postCreateCommand": "echo 'IC Design Environment Ready!'"
+}
