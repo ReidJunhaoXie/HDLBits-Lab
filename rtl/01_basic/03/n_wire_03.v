@@ -1,3 +1,4 @@
+`timescale 1ns/1ps 
 module n_wire_03(
     input a,b,c,
     output w,x,y,z
