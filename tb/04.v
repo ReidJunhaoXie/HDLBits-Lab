@@ -4,12 +4,15 @@ module tb_not_gate_04();
 
     logic tb_in ;
     logic tb_out ;
-
+    logic clk ;
     logic expected_out ;  // 正確結果
 
     integer test_count = 0 ;
     integer error_count = 0 ; // 整數 count
-
+    initial begin
+        clk = 0 ;
+        forever #5 clk = ~clk ;
+    end
     tb_not_gate_04 dut(.in(tb_in), .out(tb_out)) ;
 
     initial begin
@@ -34,7 +37,7 @@ module tb_not_gate_04();
         begin
             tb_in = i_val;
             expected_out = ~i_val; // Golden model 
-            #10; // delay 10 time unit 
+            repeat(1) @(posedge clk) ; // delay time unit 
             
             test_count = test_count + 1;
             
