@@ -1,0 +1,26 @@
+*.vvp
+a.out
+
+*.vcd
+*.fst
+*.lxt
+*.lxt2
+*.fsdb
+*.wlf
+*.log
+*.history
+*.key
+
+# Mac 系統垃圾
+.DS_Store
+
+# Windows 系統垃圾
+Thumbs.db
+ehthumbs.db
+
+# VS Code 設定 (通常個人設定不需上傳，但保留 team 設定)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
