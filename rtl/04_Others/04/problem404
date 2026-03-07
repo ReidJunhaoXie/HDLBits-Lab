@@ -1,0 +1,7 @@
+Given a 100-bit input vector [99:0], reverse its bit ordering.
+- 這題是希望用for來做，但初學者建議是不要隨意地使用for，若是寫testbench是沒關係的
+- for有兩種用法，這裡是2
+    - 1. 重複call module
+    - 2. 在behavior bloclk裡面簡化重複性敘述
+- for 可能會大幅度影響合成後的結果(timing、面積)，以這題而言使用for是沒關係的，這只是走線重新排列，無關邏輯閘，有關邏輯閘請先不急著使用for
+- 算是雖然簡單但可以幫助合成思考的題目(不寫testbench)
