@@ -1,0 +1,10 @@
+Create a 100-bit binary ripple-carry adder by instantiating 100 full adders. The adder adds two 100-bit numbers and a carry-in to produce a 100-bit sum and carry out. To encourage you to actually instantiate full adders, also output the carry-out from each full adder in the ripple-carry adder. cout[99] is the final carry-out from the last full adder, and is the carry-out you usually see.
+
+- 跟 combinational for loop 不一樣的是，generate for在實務上應該是滿高的使用率，generate for相當於重複硬體模組，再展開
+- 比如有時候你會需要20個加法器，這時候一個個call很累，即便如此，還是要絕對明白generate for會合成什麼
+- generate for 一定要在 generate block 裡面
+觀念非常重要
+    - combinational for / generate for 完全是兩回事，只是用一樣的verilog關鍵字而已
+    - generate 本質上就是一段重複生成硬體的敘述，無關behavior/assign敘述
+    - 如果要簡單重複產生硬體，就是只能在 generate 裡面使用 for，而如果要使用behavior level就要再加上behavior block(initial/always)
+- 這題同樣是語法觀念題，不寫testbench 

@@ -1,2 +1,4 @@
 A "population count" circuit counts the number of '1's in an input vector. Build a population count circuit for a 255-bit input vector.
 - 跟前面那題類似，都是在使用for，不寫testbench
+- 標準寫法可以合成，但實務上不會這樣做，本質上就是建立一個非常長(255)的 ripple carry adder，delay會非常可怕
+- 可以當成理解硬體語言的其中一個方式，等到需要真的合成，再去思考怎麼樣的電路是有利合成結果的(delay、面積)
