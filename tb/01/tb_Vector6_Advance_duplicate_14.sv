@@ -26,7 +26,7 @@ module tb_Vector6_Advance_duplicate_14;
     );
 
     initial begin
-        // 初始化
+  
         $display("---------------------------------------------------------");
         $display("Starting Exhaustive Verification for Vector_Advance_duplicate");
         $display("---------------------------------------------------------");

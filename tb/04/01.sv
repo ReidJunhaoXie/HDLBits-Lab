@@ -46,7 +46,7 @@ module tb_ConditionTenary;
     endtask
 
     initial begin
-        // 初始化
+      
         a = 0; b = 0; c = 0; d = 0;
         pass_count = 0;
         fail_count = 0;
@@ -57,8 +57,8 @@ module tb_ConditionTenary;
 
         // Directed Tests / Corner Cases
         $display("--> Directed Tests ");
-        check_min(8'h00, 8'h00, 8'h00, 8'h00); // 全零
-        check_min(8'hFF, 8'hFF, 8'hFF, 8'hFF); // 全一 
+        check_min(8'h00, 8'h00, 8'h00, 8'h00); // 0
+        check_min(8'hFF, 8'hFF, 8'hFF, 8'hFF); // 1 
         
         // Differant test
         check_min(8'h05, 8'hFF, 8'hFF, 8'hFF); // Min at a

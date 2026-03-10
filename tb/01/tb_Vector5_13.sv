@@ -64,7 +64,7 @@ module tb_Vector5_SignExtension;
         end
         $display("---------------------------------------------------------");
         
-        $finish; // 結束模擬
+        $finish; 
     end
 
 endmodule

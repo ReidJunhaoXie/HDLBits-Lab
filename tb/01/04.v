@@ -5,10 +5,10 @@ module tb_not_gate_04();
     logic tb_in ;
     logic tb_out ;
     logic clk ;
-    logic expected_out ;  // 正確結果
+    logic expected_out ;  
 
     integer test_count = 0 ;
-    integer error_count = 0 ; // 整數 count
+    integer error_count = 0 ; 
     initial begin
         clk = 0 ;
         forever #5 clk = ~clk ;
@@ -25,7 +25,7 @@ module tb_not_gate_04();
 
         $display("---------------------------------------");
         if (error_count == 0) begin
-            $display("TEST PASSED (%0d cases)", test_count);  // %0d --> 0 壓縮空格
+            $display("TEST PASSED (%0d cases)", test_count);  // %0d --> 0 stress space
         end else begin
             $display("TEST FAILED: %0d errors found", error_count);
         end

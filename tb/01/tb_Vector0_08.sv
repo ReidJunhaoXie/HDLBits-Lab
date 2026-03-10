@@ -33,8 +33,8 @@ module tb_Vector0_08;
         $display("========================================================\n");
 
         for (int i = 0; i < 8; i++) begin
-            drive_input(i);      // 驅動輸入
-            check_output(i);     // 自動檢查輸出
+            drive_input(i);      
+            check_output(i);     
         end
 
         $display("\n========================================================");
@@ -45,7 +45,7 @@ module tb_Vector0_08;
         end
         $display("========================================================\n");
         
-        $finish; // 結束模擬
+        $finish; 
     end
 
     task drive_input(input int val);

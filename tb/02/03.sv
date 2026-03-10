@@ -44,9 +44,9 @@ module tb_ModuleShift8;
         $display("---------------------------------------------------");
         $display("[TEST CASE 1] Directed Select Test");
 
-        // drive_stimulus --> 準備data(d/sel)
+        // drive_stimulus --> data(d/sel)
         // check_output --> MUX circuit        
-        // 測試 Bypass (Sel=0)
+        //  Bypass (Sel=0)
         drive_stimulus(8'hAA, 2'b00); 
         #(CLK_PERIOD/4) ;
         check_output();
@@ -71,7 +71,7 @@ module tb_ModuleShift8;
             // std::randomize  SystemVerilog random function 
             {sel, d} = $urandom(); 
             
-            // 比對輸出 
+ 
             #(CLK_PERIOD/4); 
             check_output();
         end

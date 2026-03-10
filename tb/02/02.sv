@@ -67,11 +67,7 @@ module tb_ModuleShift02;
         expected_shift_reg <= {expected_shift_reg[1:0], d};
     end
 
-    // 因為 DFF 有延遲，當下 Clock edge sample到的 q，
-    // 應該等於 "上一個 Clock edge" 時 stored 在最後一級 DFF 的值。
-    // 當下的 q 應該等於 expected_shift_reg[2] (尚未更新前的值)
-    
-    // 在 Clock posedge 後一點點時間比對
+
     always @(posedge clk) begin
         #(1); // Hold time margin
         

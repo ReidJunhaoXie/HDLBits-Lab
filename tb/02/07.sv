@@ -84,7 +84,7 @@ module tb_SubAdder07();
             run_test_case($urandom, $urandom, $urandom_range(0, 1), "Random Test");
         end
 
-        // 產生測試報告
+
         $display("=================================================");
         $display("   Verification Completed!");
         $display("   Total Tests Run : %0d", test_count);

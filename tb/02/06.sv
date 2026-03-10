@@ -24,8 +24,8 @@ module tb_CarrySelectAdder06;
         .sum(sum)
     );
 
-    task drive_and_check; // drive --> 給測資 ; check --> 檢查  tips : task is a procedure block
-        input [31:0] val_a; // 測資
+    task drive_and_check; // drive -->  data ; check   tips : task is a procedure block
+        input [31:0] val_a; // 
         input [31:0] val_b;
         begin
             a = val_a;
@@ -68,7 +68,7 @@ module tb_CarrySelectAdder06;
         // 2. All Ones 
         drive_and_check(32'hFFFF_FFFF, 32'hFFFF_FFFF);
         
-        // 3. Alternating patterns // 交錯式
+        // 3. Alternating patterns 
         drive_and_check(32'h5555_5555, 32'hAAAA_AAAA);
         
         // 4. Critical Path 
@@ -81,7 +81,7 @@ module tb_CarrySelectAdder06;
 
         // Phase 2: Pseudo-Random Tests 
         $display("[INFO] Running Phase 2: 10,000 Random Tests...");
-        begin : random_test_block // begin-end Name block 可以使用 integer
+        begin : random_test_block // begin-end Name block  -- integer
             integer i;
             for (i = 0; i < 10000; i = i + 1) begin
                 drive_and_check($urandom, $urandom);

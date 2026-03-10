@@ -21,18 +21,18 @@ module tb_Vector4_12;
     end
 
     initial begin
-        // 初始化
+      
         a = 0; b = 0; c = 0; d = 0; e = 0; f = 0;
         $display("---------------------------------------------------------------");
         $display("START TESTBENCH: Vector4_partselection_12");
         $display("---------------------------------------------------------------");
 
-        // Case 1: Corner Case - 全 0 
+        // Case 1: Corner Case -  0 
         {a,b,c,d,e,f} = 30'h0;
         repeat(1) @(posedge clk) ;
         check_result();
 
-        // Case 2: Corner Case - 全 1 
+        // Case 2: Corner Case - 1 
         {a,b,c,d,e,f} = {30{1'b1}}; 
         repeat(1) @(posedge clk) ;
         check_result();

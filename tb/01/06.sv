@@ -10,7 +10,7 @@ module tb_declare_wire06();
     logic clk ;
 
     initial begin
-        clk = 0 ;     // clk 一定要初始化
+        clk = 0 ;     // clk must be initialize
         forever #5 clk = ~clk ; 
     end
 
@@ -31,7 +31,7 @@ module tb_declare_wire06();
         for (i = 0; i < 16; i = i + 1) begin
             
             {a, b, c, d} = i[3:0];
-            #1 ; // 這個 delay 一定要，給 dut 時間更新
+            #1 ; // wait dut reflesh
             expected_out = (a & b) | (c & d);
             $display("Time=%0t | a=%b b=%b c=%b d=%b | out=%b | expected=%b", 
             $time, a, b, c, d, out, expected_out);

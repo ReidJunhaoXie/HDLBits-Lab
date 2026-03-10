@@ -6,8 +6,8 @@ module tb_n_wire_03();
     logic w, x, y, z;        // Outputs
     
     logic clk ;
-    logic [3:0] expected_val;   // 正確答案
-    logic [3:0] actual_val;     // 實際答案
+    logic [3:0] expected_val;   
+    logic [3:0] actual_val;    
     initial begin
         clk = 0 ;
         forever #5 clk = ~clk ;
@@ -22,19 +22,19 @@ module tb_n_wire_03();
     initial begin    // test in initial block
         $display("\n[Verification Start] Target: n_wire_03");
         $display("--------------------------------------------");
-        $display(" TIME | A B C | W X Y Z | Status"); // 時間 | input | output | outcome
+        $display(" TIME | A B C | W X Y Z | Status"); //  time | input | output | outcome
         $display("--------------------------------------------");
 
-        // 瓊舉所有輸入組合 (2^3 = 8)
-        for (int i = 0; i < 8; i++) begin // 宣告 32bit array i
+  
+        for (int i = 0; i < 8; i++) begin //  32bit array i
             {a, b, c} = i[2:0];
             repeat(1) @(posedge clk) ;
             #1; // delay 1 time unit 
             
-            // 準備正確答案 
+      
             expected_val = {a, b, b, c};
 
-            // 自動比對
+     
             if (actual_val === expected_val) begin
                 $display("%5tps | %b %b %b | %b %b %b %b | PASS",  // %5t -> time | ps -> pico second
                          $time, a, b, c, w, x, y, z);

@@ -32,7 +32,7 @@ module tb_Vector1_09();
 
         for (i = 0; i < 20; i = i + 1) begin
 
-            in = $urandom_range(0, 16'hFFFF);  //  產生unsigned隨機數(0-65535) 
+            in = $urandom_range(0, 16'hFFFF);   
             
             // Golden Model
             exp_hi = in[15:8];

@@ -25,7 +25,7 @@ module top_tb;
 
         $display(">>> Simulation Start");
         
-        repeat(1) @(posedge clk) ;  // !! 做一次 : 程式hold，直到下一個clk rising edge
+        repeat(1) @(posedge clk) ;  // do one tome : program hold until next clk rising edge
         #1;  // delay 1 ps to be away form hold time
         
         if (t_out === 1'b1) 
@@ -34,7 +34,7 @@ module top_tb;
             $display(">>> Check: FAIL (Output is %b)", t_out);
 
         $display(">>> Simulation End");
-        $finish; // 結束模擬
+        $finish; 
     end
 
 endmodule
